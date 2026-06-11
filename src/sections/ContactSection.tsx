@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Plus, UsersRound, X } from 'lucide-react'
 import alyssonPhoto from '../assets/imgalys.jpeg'
 import alyssonSignature from '../assets/alyssysign.png'
@@ -31,6 +31,24 @@ const founders = [
 export function ContactSection() {
   const [selectedFounder, setSelectedFounder] = useState<(typeof founders)[number] | null>(null)
   const [isTeamMenuOpen, setIsTeamMenuOpen] = useState(false)
+
+  useEffect(() => {
+    if (!selectedFounder) {
+      return
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setSelectedFounder(null)
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [selectedFounder])
 
   return (
     <>
