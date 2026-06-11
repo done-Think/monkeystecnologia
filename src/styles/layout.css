@@ -102,3 +102,16 @@
   height: var(--footer-icon-size);
   object-fit: contain;
 }
+
+@media (min-width: 641px) {
+  .site-footer-socials {
+    gap: 20px;
+  }
+
+  .site-footer-socials a {
+    --footer-icon-size: 114px;
+
+    width: 122px;
+    height: 122px;
+  }
+}

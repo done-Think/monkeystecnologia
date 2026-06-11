@@ -172,6 +172,6 @@ export const contactOptions: ContactOption[] = [
   {
     image: linkedinLogo,
     label: 'LinkedIn',
-    href: 'https://linkedin.com/company/monkeystecnologia',
+    href: 'https://www.linkedin.com/in/monkeys-tecnologia-544113416/',
   },
 ]
