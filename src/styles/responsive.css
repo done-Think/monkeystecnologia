@@ -173,7 +173,7 @@
   }
 
   .topbar--compact .brand-image {
-    width: clamp(132px, 42vw, 178px);
+    width: clamp(112px, 36vw, 146px);
   }
 
   .nav-menu-toggle {
