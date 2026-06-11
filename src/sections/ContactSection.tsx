@@ -15,7 +15,7 @@ const founders = [
     photo: maxwellPhoto,
     thumbnail: maxwellThumbnail,
     signature: maxwellSignature,
-    bio: 'Entusiasta de tecnologia de 34 anos e desenvolvedor de software experiente, com mais de 14 anos de experiência na criação de soluções digitais em diversas plataformas. Fundador da Monkeys Tecnologia no Brasil e atualmente à frente da doneThink, uma empresa de tecnologia inovadora com sede na Estônia. Com profundo conhecimento em desenvolvimento full-stack e design de produto, o CEO também atuou como líder técnico e gerente de engenharia, guiando com sucesso equipes multifuncionais em desafios complexos. Sua experiência inclui trabalho prático com sistemas embarcados, aplicativos móveis e plataformas web, sempre combinando excelência técnica com uma mentalidade orientada a produto. Impulsionado pela inovação e simplicidade, ele se dedica a transformar problemas complexos em soluções elegantes, escaláveis e impactantes.',
+    bio: 'CEO da Monkeys Tecnologia e engenheiro de software com mais de 14 anos de experiência no desenvolvimento de produtos digitais.\n\nEspecialista em arquitetura de software, desenvolvimento full-stack e soluções escaláveis, atuo conectando tecnologia e negócios para criar sistemas, automações e produtos que geram resultados reais para empresas.\n\nApaixonado por tecnologia, inovação e aprendizado contínuo, acredito no poder da tecnologia para simplificar processos, impulsionar crescimento e transformar ideias em resultados.',
   },
   {
     name: 'Alysson Sene',
