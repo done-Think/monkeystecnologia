@@ -500,7 +500,7 @@
   }
 
   .founder-modal-photo {
-    height: auto;
+    height: min(92vw, 420px);
     min-height: 0;
     object-fit: contain;
     border-radius: 8px 8px 0 0;
@@ -512,6 +512,10 @@
 
   .founder-modal-copy h3 {
     margin-right: 46px;
+  }
+
+  .founder-signature h3 {
+    margin-right: 0;
   }
 
   .founder-modal-copy p {
