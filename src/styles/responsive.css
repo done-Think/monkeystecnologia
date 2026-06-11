@@ -500,8 +500,9 @@
   }
 
   .founder-modal-photo {
-    height: 260px;
+    height: auto;
     min-height: 0;
+    object-fit: contain;
     border-radius: 8px 8px 0 0;
   }
 
