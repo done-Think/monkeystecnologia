@@ -162,12 +162,12 @@ export const contactOptions: ContactOption[] = [
   {
     image: instaLogo,
     label: 'Insta',
-    href: 'https://instagram.com/monkeystecnologia',
+    href: 'https://www.instagram.com/monkeystecnologia?igsh=M2NlMGw4MXp2NWIy',
   },
   {
     image: emailLogo,
     label: 'Email',
-    href: 'mailto:contato@monkeystecnologia.com',
+    href: 'mailto:contact@donethink.com',
   },
   {
     image: linkedinLogo,
