@@ -162,6 +162,7 @@
   .topbar {
     width: 100%;
     max-width: none;
+    align-content: flex-start;
     justify-content: space-between;
     margin-inline: 0;
     padding-inline: 12px;
@@ -172,7 +173,7 @@
   }
 
   .topbar--compact .brand-image {
-    width: clamp(112px, 36vw, 146px);
+    width: clamp(132px, 42vw, 178px);
   }
 
   .nav-menu-toggle {
