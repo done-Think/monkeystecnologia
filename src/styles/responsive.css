@@ -162,32 +162,57 @@
   .topbar {
     width: 100%;
     max-width: none;
+    height: calc(72px + env(safe-area-inset-top));
+    min-height: calc(72px + env(safe-area-inset-top));
+    align-content: center;
     justify-content: space-between;
     margin-inline: 0;
     padding-inline: 12px;
+    row-gap: 0;
+    transition: none;
+  }
+
+  .topbar--compact,
+  .topbar--menu-open {
+    height: calc(72px + env(safe-area-inset-top));
+    min-height: calc(72px + env(safe-area-inset-top));
+    row-gap: 0;
   }
 
   .brand-image {
     width: clamp(132px, 42vw, 178px);
+    transition: none;
   }
 
   .topbar--compact .brand-image {
-    width: clamp(112px, 36vw, 146px);
+    width: clamp(132px, 42vw, 178px);
+    opacity: 1;
   }
 
   .nav-menu-toggle {
     display: inline-flex;
     flex: 0 0 auto;
+    transition: none;
   }
 
   .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 12px;
+    left: 12px;
     display: none;
     grid-template-columns: 1fr;
     order: 3;
-    width: min(100%, 320px);
+    width: auto;
     gap: 0;
     overflow: visible;
     padding: 6px 0 10px;
+    border: 1px solid rgba(255, 106, 0, 0.18);
+    border-radius: 0 0 8px 8px;
+    border-top: 0;
+    background: #050505;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.32);
+    transition: none;
   }
 
   .topbar--menu-open .nav-links {
@@ -199,10 +224,15 @@
     justify-content: center;
     padding: 12px 10px;
     font-size: 0.82rem;
+    transition: none;
+  }
+
+  .nav-links a::after {
+    transition: none;
   }
 
   .topbar--compact .nav-links a {
-    font-size: 0.76rem;
+    font-size: 0.82rem;
   }
 
   .nav-cta {
@@ -526,10 +556,10 @@
   .founder-signature img {
     height: 82px;
   }
+
 }
 
 @media (max-width: 380px) {
-  .topbar,
   .hero-section,
   .highlight-strip,
   .pain-section,
