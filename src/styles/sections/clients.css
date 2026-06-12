@@ -402,7 +402,7 @@
   left: calc(3.9% + var(--client-map-offset));
   --feature-logo-depth-direction: -1.45;
   --feature-logo-x: -38%;
-  --feature-logo-nudge-x: 0px;
+  --feature-logo-nudge-x: 8px;
   clip-path: polygon(-28% 0, 100% 10%, 99% 93%, -28% 100%);
   transform: perspective(1080px) rotateY(-8deg) rotateX(0.8deg) rotateZ(1.2deg) skewX(0.5deg);
 }
@@ -428,8 +428,8 @@
 }
 
 .client-feature-logo {
-  --feature-logo-height: calc(48% + 18px);
-  --feature-logo-width: min(calc(56% + 28px), 178px);
+  --feature-logo-height: calc(48% + 8px);
+  --feature-logo-width: min(calc(56% + 18px), 168px);
   --feature-logo-y: 45%;
   --feature-logo-tilt: 0deg;
   --feature-logo-depth: 11deg;
@@ -456,43 +456,43 @@
 }
 
 .client-feature-logo--fit-icon {
-  --feature-logo-height: calc(46% + 22px);
-  --feature-logo-width: min(calc(48% + 30px), 152px);
+  --feature-logo-height: calc(46% + 12px);
+  --feature-logo-width: min(calc(48% + 20px), 142px);
   --feature-logo-y: 43%;
 }
 
 .client-feature-logo--fit-compact {
-  --feature-logo-height: calc(48% + 22px);
-  --feature-logo-width: min(calc(50% + 30px), 160px);
+  --feature-logo-height: calc(48% + 12px);
+  --feature-logo-width: min(calc(50% + 20px), 150px);
   --feature-logo-y: 43%;
   --feature-logo-depth: 12deg;
 }
 
 .client-feature-logo--fit-wide {
-  --feature-logo-height: calc(50% + 12px);
-  --feature-logo-width: min(calc(62% + 20px), 180px);
+  --feature-logo-height: calc(50% + 2px);
+  --feature-logo-width: min(calc(62% + 10px), 170px);
   --feature-logo-y: 45%;
   --feature-logo-tilt: 1.2deg;
   --feature-logo-depth: 14deg;
 }
 
 .client-feature-logo--fit-ultrawide {
-  --feature-logo-height: calc(46% + 12px);
-  --feature-logo-width: min(calc(66% + 18px), 188px);
+  --feature-logo-height: calc(46% + 2px);
+  --feature-logo-width: min(calc(66% + 8px), 178px);
   --feature-logo-y: 45%;
   --feature-logo-tilt: 1.4deg;
   --feature-logo-depth: 15deg;
 }
 
 .client-feature-logo--portal-idea {
-  --feature-logo-height: calc(48% + 22px);
-  --feature-logo-width: min(calc(50% + 28px), 156px);
+  --feature-logo-height: calc(48% + 12px);
+  --feature-logo-width: min(calc(50% + 18px), 146px);
   --feature-logo-y: 43%;
 }
 
 .client-feature-logo--pd-solucoes {
-  --feature-logo-height: calc(44% + 22px);
-  --feature-logo-width: min(calc(50% + 28px), 158px);
+  --feature-logo-height: calc(44% + 12px);
+  --feature-logo-width: min(calc(50% + 18px), 148px);
   --feature-logo-y: 44%;
 }
 
@@ -620,8 +620,8 @@
 
   .client-feature-logo--fit-icon,
   .client-feature-logo--fit-compact {
-    --feature-logo-height: calc(46% + 20px);
-    --feature-logo-width: calc(50% + 20px);
+    --feature-logo-height: calc(46% + 15px);
+    --feature-logo-width: calc(50% + 15px);
     --feature-logo-y: 43%;
   }
 
@@ -638,14 +638,14 @@
   }
 
   .client-feature-logo--portal-idea {
-    --feature-logo-height: calc(48% + 20px);
-    --feature-logo-width: calc(52% + 20px);
+    --feature-logo-height: calc(48% + 15px);
+    --feature-logo-width: calc(52% + 15px);
     --feature-logo-y: 43%;
   }
 
   .client-feature-logo--pd-solucoes {
-    --feature-logo-height: calc(44% + 20px);
-    --feature-logo-width: calc(50% + 20px);
+    --feature-logo-height: calc(44% + 15px);
+    --feature-logo-width: calc(50% + 15px);
     --feature-logo-y: 43%;
   }
 
