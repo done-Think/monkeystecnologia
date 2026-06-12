@@ -160,14 +160,14 @@
   }
 
   .topbar {
+    display: block;
     width: 100%;
     max-width: none;
     height: calc(72px + env(safe-area-inset-top));
     min-height: calc(72px + env(safe-area-inset-top));
-    align-content: center;
-    justify-content: space-between;
     margin-inline: 0;
     padding-inline: 12px;
+    padding-block: 6px;
     row-gap: 0;
     transition: none;
   }
@@ -177,6 +177,12 @@
     height: calc(72px + env(safe-area-inset-top));
     min-height: calc(72px + env(safe-area-inset-top));
     row-gap: 0;
+  }
+
+  .brand {
+    position: absolute;
+    top: calc(6px + env(safe-area-inset-top));
+    left: max(12px, env(safe-area-inset-left));
   }
 
   .brand-image {
@@ -192,6 +198,9 @@
   .nav-menu-toggle {
     display: inline-flex;
     flex: 0 0 auto;
+    position: absolute;
+    top: calc(14px + env(safe-area-inset-top));
+    right: max(12px, env(safe-area-inset-right));
     transition: none;
   }
 
@@ -202,7 +211,6 @@
     left: 12px;
     display: none;
     grid-template-columns: 1fr;
-    order: 3;
     width: auto;
     gap: 0;
     overflow: visible;
