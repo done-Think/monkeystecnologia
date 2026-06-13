@@ -449,10 +449,10 @@
 
   .contact-menu-items a,
   .contact-menu-items button {
-    --trigger-offset: -36px;
+    --trigger-offset: -53px;
     position: absolute;
-    width: 72px;
-    height: 72px;
+    width: 106px;
+    height: 106px;
     opacity: 0;
     pointer-events: none;
     transform: scale(0.28);
@@ -462,8 +462,8 @@
   .contact-menu-items a img,
   .contact-menu-items button svg,
   .contact-menu-items button img {
-    width: 64px;
-    height: 64px;
+    width: 98px;
+    height: 98px;
   }
 
   .contact-menu-items button img {
