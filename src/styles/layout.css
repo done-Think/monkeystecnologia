@@ -109,9 +109,9 @@
   }
 
   .site-footer-socials a {
-    --footer-icon-size: 114px;
+    --footer-icon-size: 82px;
 
-    width: 122px;
-    height: 122px;
+    width: 90px;
+    height: 90px;
   }
 }
