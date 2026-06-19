@@ -21,8 +21,19 @@ function scrollToSection(href: string) {
     return
   }
 
-  const topbarHeight = document.querySelector<HTMLElement>('.topbar')?.offsetHeight ?? 0
-  const targetTop = window.scrollY + target.getBoundingClientRect().top - topbarHeight - 24
+  const topbar = document.querySelector<HTMLElement>('.topbar')
+  const topbarHeight = topbar?.offsetHeight ?? 0
+  const willUseCompactHeader = window.scrollY + target.getBoundingClientRect().top > 80
+  const desktopCompactHeight = 58
+  const tabletCompactHeight = 64
+  const targetOffset = willUseCompactHeader
+    ? window.matchMedia('(max-width: 640px)').matches
+      ? topbarHeight
+      : window.matchMedia('(max-width: 980px)').matches
+        ? tabletCompactHeight
+        : desktopCompactHeight
+    : topbarHeight
+  const targetTop = window.scrollY + target.getBoundingClientRect().top - targetOffset + 1
 
   window.scrollTo({ top: Math.max(0, targetTop), left: 0, behavior: 'auto' })
   window.history.pushState(null, '', href)

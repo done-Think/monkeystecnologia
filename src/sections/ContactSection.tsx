@@ -24,7 +24,7 @@ const founders = [
     photo: alyssonPhoto,
     thumbnail: alyssonThumbnail,
     signature: alyssonSignature,
-    bio: 'Cofundador da doneThink e desenvolvedor de software com sólida experiência na criação de soluções digitais focadas em aprimorar a experiência do usuário. Desde 2018, atua na área de tecnologia, com forte presença em ambientes ágeis, dinâmicos e colaborativos. Aos 30 anos, combina atenção aos detalhes, senso estético e visão estratégica com as melhores práticas de desenvolvimento para entregar produtos funcionais, escaláveis e bem projetados. Ambiciona alcançar posições de liderança técnica, contribuindo para o desenvolvimento de novos talentos e ajudando a construir soluções escaláveis, elegantes e com propósito.',
+    bio: 'Cofundador da Monkeys Tecnologia e desenvolvedor de software com sólida experiência na criação de soluções digitais focadas em aprimorar a experiência do usuário. Desde 2018, atua na área de tecnologia, com forte presença em ambientes ágeis, dinâmicos e colaborativos. Aos 30 anos, combina atenção aos detalhes, senso estético e visão estratégica com as melhores práticas de desenvolvimento para entregar produtos funcionais, escaláveis e bem projetados. Ambiciona alcançar posições de liderança técnica, contribuindo para o desenvolvimento de novos talentos e ajudando a construir soluções escaláveis, elegantes e com propósito.',
   },
 ]
 
