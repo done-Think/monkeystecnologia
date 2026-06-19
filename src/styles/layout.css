@@ -11,7 +11,7 @@
     radial-gradient(circle at 78% 10%, rgba(255, 102, 0, 0.22), transparent 34rem),
     radial-gradient(circle at 12% 34%, rgba(255, 102, 0, 0.1), transparent 28rem),
     linear-gradient(180deg, rgba(5, 5, 5, 0.92) 0%, rgba(11, 11, 12, 0.9) 48%, rgba(17, 16, 15, 0.94) 100%),
-    url('../assets/fundo 2.png') center top / cover repeat-y;
+    url('../assets/fundo 2.png') center top / 100% auto repeat-y;
   color: var(--text);
 }
 

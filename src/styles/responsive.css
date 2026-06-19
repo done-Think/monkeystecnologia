@@ -126,6 +126,74 @@
   }
 }
 
+@media (min-width: 641px) and (max-width: 980px) {
+  .site-shell {
+    --topbar-space: 72px;
+  }
+
+  .topbar,
+  .topbar--compact {
+    flex-wrap: nowrap;
+    min-height: 72px;
+    padding-inline: clamp(10px, 2vw, 16px);
+    gap: clamp(8px, 1.5vw, 16px);
+    row-gap: 0;
+  }
+
+  .brand,
+  .nav-cta {
+    flex: 0 0 auto;
+  }
+
+  .brand-image,
+  .topbar--compact .brand-image {
+    width: clamp(112px, 16vw, 132px);
+    opacity: 1;
+  }
+
+  .nav-links {
+    order: initial;
+    flex: 1 1 auto;
+    justify-content: center;
+    width: auto;
+    min-width: 0;
+    gap: clamp(6px, 1.2vw, 14px);
+  }
+
+  .nav-links a,
+  .topbar--compact .nav-links a {
+    padding-block: 8px;
+    font-size: clamp(0.7rem, 1.5vw, 0.86rem);
+    white-space: nowrap;
+  }
+
+  .nav-cta,
+  .topbar--compact .nav-cta {
+    gap: 6px;
+    padding: 8px 10px;
+    font-size: 0.78rem;
+  }
+
+  .contact-menu-wrap {
+    justify-self: center;
+    width: min(100%, 560px);
+    height: 230px;
+    margin-inline: auto;
+  }
+
+  .contact-menu-items.is-open a:nth-child(1),
+  .contact-menu-items.is-open button:nth-child(1) {
+    --item-left: calc(50% - clamp(132px, 20vw, 155px));
+    --item-top: 50%;
+  }
+
+  .contact-menu-items.is-open a:nth-child(2),
+  .contact-menu-items.is-open button:nth-child(2) {
+    --item-left: calc(50% + clamp(132px, 20vw, 155px));
+    --item-top: 50%;
+  }
+}
+
 @media (max-width: 640px) {
   .site-shell {
     --topbar-space: 108px;
@@ -137,7 +205,7 @@
   #caminhos,
   #clientes,
   #sobre-nos {
-    scroll-margin-top: 128px;
+    scroll-margin-top: 73px;
   }
 
   .hero-section,

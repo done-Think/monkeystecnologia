@@ -8,7 +8,7 @@
 }
 
 .pain-section {
-  padding: 124px 0 0;
+  padding: 54px 0 0;
 }
 
 .services-section {
@@ -50,6 +50,14 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
+}
+
+.pain-section .section-heading {
+  margin-bottom: 46px;
+}
+
+.pain-grid {
+  gap: 20px;
 }
 
 .pain-card,
