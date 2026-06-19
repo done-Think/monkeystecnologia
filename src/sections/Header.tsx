@@ -1,4 +1,4 @@
-import { useEffect, useState, type MouseEvent } from 'react'
+import { useEffect, useRef, useState, type MouseEvent } from 'react'
 import { ArrowRight, Menu, X } from 'lucide-react'
 import monkeyIniLogo from '../assets/monkey-ini.png'
 import { createWhatsAppLink } from '../data/siteContent'
@@ -40,16 +40,18 @@ function scrollToSection(href: string) {
 }
 
 function getCurrentNavSection() {
-  const topbarHeight = document.querySelector<HTMLElement>('.topbar')?.offsetHeight ?? 0
-  const activationLine = Math.max(topbarHeight + 96, window.innerHeight * 0.62)
+  const hasReachedPageEnd = Math.ceil(window.scrollY + window.innerHeight) >= document.documentElement.scrollHeight - 1
+  if (hasReachedPageEnd) return navItems[navItems.length - 1].href
+
+  const topbarBottom = document.querySelector<HTMLElement>('.topbar')?.getBoundingClientRect().bottom ?? 0
+  const activationLine = topbarBottom + Math.min(96, window.innerHeight * 0.2)
   let currentSection = ''
 
   navItems.forEach((item) => {
     const target = document.querySelector<HTMLElement>(item.href)
     if (!target) return
 
-    const sectionRect = target.getBoundingClientRect()
-    if (sectionRect.top <= activationLine && sectionRect.bottom > topbarHeight) {
+    if (target.getBoundingClientRect().top <= activationLine) {
       currentSection = item.href
     }
   })
@@ -62,6 +64,7 @@ export function Header() {
   const [activeSection, setActiveSection] = useState('')
   const [isMobileNav, setIsMobileNav] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const navSelectionLockRef = useRef<{ href: string; scrollY: number | null } | null>(null)
 
   useEffect(() => {
     const mobileQuery = window.matchMedia('(max-width: 640px)')
@@ -70,6 +73,14 @@ export function Header() {
       setIsMobileNav(mobileQuery.matches)
       if (!mobileQuery.matches) setIsMenuOpen(false)
       setIsCompact(window.scrollY > 80)
+
+      const selectionLock = navSelectionLockRef.current
+      if (selectionLock && (selectionLock.scrollY === null || Math.abs(window.scrollY - selectionLock.scrollY) <= 1)) {
+        setActiveSection(selectionLock.href)
+        return
+      }
+
+      navSelectionLockRef.current = null
       setActiveSection(getCurrentNavSection())
     }
 
@@ -86,6 +97,7 @@ export function Header() {
   const handleBrandClick = (event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault()
 
+    navSelectionLockRef.current = null
     setIsMenuOpen(false)
     setActiveSection('')
     scrollToSection('#inicio')
@@ -93,20 +105,22 @@ export function Header() {
 
   const handleNavClick = (event: MouseEvent<HTMLAnchorElement>, href: string) => {
     event.preventDefault()
+    navSelectionLockRef.current = { href, scrollY: null }
     setActiveSection(href)
+
+    const navigateToSection = () => {
+      scrollToSection(href)
+      navSelectionLockRef.current = { href, scrollY: window.scrollY }
+      setActiveSection(href)
+    }
 
     if (isMobileNav) {
       setIsMenuOpen(false)
-      window.requestAnimationFrame(() => {
-        scrollToSection(href)
-        window.setTimeout(() => setActiveSection(getCurrentNavSection() || href), 80)
-      })
+      window.requestAnimationFrame(navigateToSection)
       return
     }
 
-    scrollToSection(href)
-    window.requestAnimationFrame(() => setActiveSection(href))
-    window.setTimeout(() => setActiveSection(getCurrentNavSection() || href), 80)
+    navigateToSection()
   }
 
   return (
